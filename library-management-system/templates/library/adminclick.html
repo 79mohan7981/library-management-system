@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+      .bg-image {
+        background-image: url('static/images/img2.jpg');
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .overlay-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      .jumbotron {
+        background-color: rgba(0, 0, 0, 0); /* Black background with transparency */
+        color: white;
+      }
+
+      .jumbotron h1, .jumbotron p {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image"></div>
+    {% include "library/navbar.html" %}
+    <br><br>
+    <div class="overlay-content">
+      <div class="jumbotron">
+        <h1 class="display-4">Hello, Admin</h1>
+        <p class="lead">Welcome to Library Management System.</p>
+        <hr class="lead">
+        <p>You can add a book, issue a book, and many more after Login/SignUp.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" style="border-radius:0px;" href="adminsignup" role="button">SignUp</a>
+          <a class="btn btn-primary btn-lg" style="border-radius:0px;" href="adminlogin" role="button">Login</a>
+        </p>
+      </div>
+    </div>
+    {% include "library/footer.html" %}
+  </body>
+</html>
+

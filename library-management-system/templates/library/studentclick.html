@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Library management system</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <style>
+      .bg-image {
+        background-image: url('static/images/img.png');
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+
+      .overlay-content {
+        position: relative;
+        z-index: 1;
+        color: navy; /* Dark navy blue text color */
+        text-align: center; /* Align text to the left */
+        padding: 50px; /* Add padding to move text slightly to the left */
+      }
+
+      .jumbotron {
+        background-color: rgba(0, 0, 0, 0); /* White background with transparency */
+        color: navy;
+        padding: 2rem;
+        border-radius: 0.3rem;
+      }
+
+      .jumbotron h1, .jumbotron p {
+        color: navy; /* Dark navy blue text color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-image"></div>
+    {% include "library/navbar.html" %}
+    <br><br>
+    <div class="overlay-content">
+      <div class="jumbotron">
+        <h1 class="display-4">Hello, Student</h1>
+        <p class="lead">Welcome to Online Library Management System.</p>
+        <hr class="my-4">
+        <p>You can access various features after Login.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" style="border-radius: 0%;" href="studentsignup" role="button">SignUp</a>
+          <a class="btn btn-primary btn-lg" style="border-radius: 0%;" href="studentlogin" role="button">Login</a>
+        </p>
+      </div>
+    </div>
+    {% include "library/footer.html" %}
+  </body>
+</html>
